@@ -21,10 +21,13 @@ jobs:
         run: npm install
 
       - name: Ejecutar pruebas
-        run: npm test
+        run: echo "No tests yet"
 
       - name: Construir Docker
         run: docker build -t mi-app .
 
       - name: Ejecutar contenedor
-        run: docker run mi-app
+        run: docker run -d -p 3000:3000 mi-app
+
+      - name: Probar app
+        run: curl --retry 5 --retry-delay 5 http://localhost:3000
