@@ -1,3 +1,4 @@
+// app.js
 const http = require('http');
 
 const PORT = 3000;
@@ -10,6 +11,3 @@ const server = http.createServer((req, res) => {
 server.listen(PORT, '0.0.0.0', () => {
   console.log(`🚀 Aplicación ejecutándose en http://0.0.0.0:${PORT}`);
 });
-
-
-console.log("🚀 Aplicación ejecutándose correctamente");
